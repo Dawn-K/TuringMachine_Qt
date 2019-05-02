@@ -1,0 +1,6 @@
+s: q0
+f: q1
+6:
+a q0 a q0 R
+b q0 b q0 R
+B q0 B q1 L
