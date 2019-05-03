@@ -124,18 +124,18 @@ void MainWindow::paintEvent(QPaintEvent *)
     int h=metrics.height(); //获取显示文本的高度
     painter.setFont(font);
     painter.setPen(Qt::blue);
-    painter.drawText(QRect(width()/2-w,height()/5*4-h,w,h),text);
+    painter.drawText(QRect(width()/2-w/2,height()/5*4-h,w,h),text);
     int perW ;
     if(str.size()){
         painter.setPen(Qt::red);
         perW =  w/str.size();
-        painter.drawRect(QRect(width()/2-w+perW*curPos,height()/5*4-h,perW,h));
+        painter.drawRect(QRect(width()/2-w/2+perW*curPos,height()/5*4-h,perW,h));
         QFont font1("consolas",15,QFont::Bold,true);
         QFontMetrics newMetrics(font1);
         int newW = newMetrics.width(QString::fromStdString(curSta));
         int newH  = newMetrics.height();
         painter.setFont(font1);
-        painter.drawText(QRect(width()/2-w+perW*curPos,height()/5*4-h-50,newW,newH),QString::fromStdString(curSta));
+        painter.drawText(QRect(width()/2-w/2+perW*curPos,height()/5*4-h-50,newW,newH),QString::fromStdString(curSta));
     }
 
     //
