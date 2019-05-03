@@ -1,7 +1,0 @@
-s: q0
-f: q2
-6:
-0 q0 0 q0 R
-1 q0 1 q1 R
-1 q1 1 q1 R
-B q1 B q2 L

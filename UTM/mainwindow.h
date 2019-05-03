@@ -16,8 +16,15 @@
 #include <map>
 #include <set>
 #include <sys/types.h>
+
+#ifdef _WIN32
+ #include "myDirent.h"
+#endif
+
+#ifdef linux
 #include <dirent.h>
-#include <unistd.h>
+// #include <unistd.h>
+#endif
 namespace Ui {
 class MainWindow;
 }
