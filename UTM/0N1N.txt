@@ -1,0 +1,16 @@
+s: q0
+f: q4
+6:
+0 q0 X q1 R
+0 q1 0 q1 R
+Y q1 Y q1 R
+1 q1 Y q2 L
+0 q2 0 q2 L
+Y q2 Y q2 L
+X q2 X q0 R
+Y q0 Y q3 R
+Y q3 Y q3 R
+B q3 B q4 L
+X q4 0 q4 L
+Y q4 1 q4 L
+B q4 B q4 R
