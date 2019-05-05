@@ -83,10 +83,11 @@ void MainWindow::on_BTN_NextStep_clicked()
 
 void MainWindow::on_BTN_RESET_clicked()
 {
-    //    str="";
-    //    curPos=0;
-    //    curCh=' ';
-    //    ui->LE_inputString->setText("");
+        str="";
+        curPos=0;
+        curCh=' ';
+        ui->LE_inputString->setText("");
+        PrintString();
 }
 
 void MainWindow::on_BTN_LoadFile_clicked()
@@ -129,12 +130,13 @@ void MainWindow::paintEvent(QPaintEvent *)
     if(str.size()){
         painter.setPen(Qt::red);
         perW =  w/str.size();
-        painter.drawRect(QRect(width()/2-w/2+perW*curPos,height()/5*4-h,perW,h));
+      //  painter.drawRect(QRect(width()/2-w/2+perW*curPos,height()/5*4-h,perW,h));
         QFont font1("consolas",15,QFont::Bold,true);
         QFontMetrics newMetrics(font1);
         int newW = newMetrics.width(QString::fromStdString(curSta));
         int newH  = newMetrics.height();
         painter.setFont(font1);
+        painter.drawText(QRect(width()/2-w/2+perW*curPos+10,height()/5*4-h-25,perW,h),QString::fromStdString("↧"));
         painter.drawText(QRect(width()/2-w/2+perW*curPos,height()/5*4-h-50,newW,newH),QString::fromStdString(curSta));
     }
 

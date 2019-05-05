@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/back">
+        <file>Nier.jpg</file>
+        <file>string.png</file>
+        <file>start.png</file>
+        <file>file.png</file>
+        <file>next.png</file>
+        <file>end.png</file>
+        <file>clear.png</file>
+        <file>begin.png</file>
+        <file>Turing.jpg</file>
+    </qresource>
+</RCC>

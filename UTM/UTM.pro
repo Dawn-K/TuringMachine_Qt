@@ -43,3 +43,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     log.txt
+
+RESOURCES += \
+    image/img.qrc

@@ -1,0 +1,20 @@
+s: q0
+f: q5
+6:
+a q0 c q1 R
+c q0 c q0 R
+c q1 c q1 R
+a q1 a q2 R
+b q2 b q2 R
+c q2 c q2 R
+a q2 c q1 R
+B q2 b q3 L
+B q1 b q3 L
+c q3 c q3 L
+a q3 a q3 L
+b q3 b q3 L
+B q3 B q0 R
+b q0 B q4 L
+c q4 B q4 L
+B q4 B q5 R
+b q1 b q1 R
