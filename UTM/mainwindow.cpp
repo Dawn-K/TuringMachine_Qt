@@ -51,7 +51,7 @@ void MainWindow::PrintString(){
 }
 
 
-void MainWindow::on_BTN_NextStep_clicked()
+int MainWindow::on_BTN_NextStep_clicked()
 {
     // std::cerr<<"NEXT STEP"<<std::endl;
     bool success;
@@ -68,16 +68,18 @@ void MainWindow::on_BTN_NextStep_clicked()
             str = str +'B';
         }
         PrintString();
+        return 1;
     }else { // 检测到非法的移动,如果是终止状态,则宣布字符串合法,如果不是,则宣布字符串不合法
         std::cerr<<"NEXT STEP is wrong"<<std::endl;
         PrintString();
         if(SearchFSS(curSta)){
             QMessageBox::information(NULL, "判断完毕", "该字符串合法!", QMessageBox::Yes);
-            on_BTN_RESET_clicked();
+           // on_BTN_RESET_clicked();
         }else {
             QMessageBox::information(NULL, "判断完毕", "该字符串非法!", QMessageBox::Yes);
-            on_BTN_RESET_clicked();
+           // on_BTN_RESET_clicked();
         }
+        return 0;
     }
 }
 
@@ -158,4 +160,14 @@ void MainWindow::on_BTN_LoadString_clicked()
 void MainWindow::on_CB_selectTM_currentIndexChanged(const QString &arg1)
 {
     curFile = arg1.toStdString();
+}
+
+void MainWindow::on_BTN_AutoPlay_clicked()
+{
+    double delay = 0.1;
+    while (on_BTN_NextStep_clicked()) {
+        sleep(delay);
+    }
+    PrintString();
+
 }

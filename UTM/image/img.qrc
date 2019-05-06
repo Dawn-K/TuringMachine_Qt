@@ -9,5 +9,6 @@
         <file>clear.png</file>
         <file>begin.png</file>
         <file>Turing.jpg</file>
+        <file>auto.png</file>
     </qresource>
 </RCC>

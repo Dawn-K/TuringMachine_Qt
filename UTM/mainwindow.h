@@ -23,7 +23,7 @@
 
 #ifdef linux
 #include <dirent.h>
-// #include <unistd.h>
+ #include <unistd.h>
 #endif
 namespace Ui {
 class MainWindow;
@@ -41,7 +41,7 @@ public:
 private slots:
     void Init();
 
-    void on_BTN_NextStep_clicked();
+    int on_BTN_NextStep_clicked();
 
     void on_BTN_RESET_clicked();
 
@@ -54,6 +54,8 @@ private slots:
     void on_CB_selectTM_currentIndexChanged(const QString &arg1);
 
     void paintEvent(QPaintEvent *event);
+
+    void on_BTN_AutoPlay_clicked();
 
 private:
     Ui::MainWindow *ui;
